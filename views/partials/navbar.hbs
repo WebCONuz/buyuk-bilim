@@ -1,0 +1,150 @@
+<!-- NAVBAR SECTION -->
+{{#if isAdmin}}
+    <div class="main-nav">
+        <div class="container-md">
+            <div class="row">
+                <div class="col-lg-12 d-flex align-items-center justify-content-between">
+                    <ul class="menu d-flex align-items-center px-0 m-0">
+                        <li class="li">
+                            <a class="a" href="{{url}}">
+                                <img src="{{url}}img/nav/logo.png" alt="logo img" style="width: 50px;" />
+                            </a>
+                        </li>
+                         <li class="li">
+                            <a class="a bi bi-grid-1x2-fill" href="{{url}}courses/all"> All Course</a>
+                        </li>
+                        <li class="li">
+                            <a class="a bi bi-plus-circle-fill" href="{{url}}courses/add"> Add Course</a>
+                        </li>
+                        <li class="li">
+                            <a class="a bi bi-plus-square-fill" href="{{url}}admin/signup"> Add admin</a>
+                        </li>
+                        <li class="li">
+                            <a class="a bi bi-person-workspace" href="{{url}}admin/usersTable"> Registrations</a>
+                        </li>
+                        <li class="li">
+                            <a class="a bi bi-chat-dots-fill" href="{{url}}admin/postTable"> Descripstions</a>
+                        </li>
+                    </ul>
+                    <form action="/admin/logout" method="get">
+                        <div class="btn-box">
+                            <button type="submit" class="sendBtn">Log out</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{{else}}
+    <nav id="navbar">
+         <div class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 d-flex justify-content-between align-items-center">
+                        <ul class="top-nav-info d-flex align-items-center mb-0 px-0">
+                            <li class="d-flex align-items-center me-md-3">
+                                <i class="me-2 bi bi-telephone-fill"></i>
+                                <p class="mb-0">(+998) 95 500 07 06</p>
+                            </li>
+                            <li class="d-flex align-items-center me-md-3 md-none">
+                                <i class="me-2 bi bi-envelope-fill"></i>
+                                <p class="mb-0">buyukbilim1@gmail.com</p>
+                            </li>
+                            <li class="d-flex align-items-center me-md-3 md-none">
+                                <i class="me-2 bi bi-alarm-fill"></i>
+                                <p class="mb-0">Ish vaqti: 08:00 - 20:00</p>
+                            </li>
+                        </ul>
+                        <div class="navbar-links">
+                            <a href="#" class="bi bi-facebook"></a>
+                            <a href="https://instagram.com/buyuk_bilim?igshid=YmMyMTA2M2Y=" class="bi bi-instagram" target="_blank"></a>
+                            <a href="https://t.me/Buyuk_Bilim" class="bi bi-telegram" target="_blank"></a>
+                            <a href="https://www.youtube.com/channel/UCsfVGVpZgayRKfkyJxDqKMQ" class="bi bi-youtube" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="loacation-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 d-flex align-items-center justify-content-between py-4">
+                        <div class="logo">
+                            <img src="{{url}}img/nav/logo.png" alt="logo img" />
+                        </div>
+                        <ul class="location-info d-flex align-items-center mb-0 px-0">
+                            <li class="d-flex align-items-center ms-4">
+                                <div class="icon">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <div class="info">
+                                    <h5>Aloqa uchun</h5>
+                                    <p class="mb-0">(+998) 95 500 07 06</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center ms-4">
+                                <div class="icon">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                                <div class="info">
+                                    <h5>Elektron pochta</h5>
+                                    <p class="mb-0">buyukbilim1@gmail.com</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center ms-4">
+                                <div class="icon">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <div class="info">
+                                    <h5>Manzilimiz</h5>
+                                    <p class="mb-0">Ko'ksaroy 1, Samarkand</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="bars">
+                            <img src="{{url}}img/nav/menu.png" alt="burger" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main-nav">
+        <div class="container-md">
+            <div class="row">
+                <div class="col-lg-12 d-flex align-items-center justify-content-between">
+                    <ul class="menu d-flex align-items-center px-0 m-0">
+                        <li class="li">
+                            <a class="a" href="{{url}}">BOSH SAHIFA</a>
+                        </li>
+                        <li class="li">
+                            <a class="a" href="{{url}}about">BIZ HAQIMIZDA</a>
+                        </li>
+                        <li class="li">
+                            <a class="a a1" href="{{url}}courses/offline">
+                                KURSLARIMIZ
+                                <i class="ms-1 bi bi-caret-down"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="{{url}}courses/offline">Offline</a>
+                                </li>
+                                <li>
+                                    <a href="{{url}}courses/online">Online</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="li">
+                            <a class="a" href="{{url}}auth/register">REGISTRATSIYA</a>
+                        </li>
+                    </ul>
+                    <div class="btn-box">
+                        <a href="{{url}}admin/login">
+                            <button class="sendBtn">Kirish</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/if}}

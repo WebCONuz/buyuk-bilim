@@ -1,0 +1,28 @@
+<!-- REGISTER SECTION  -->
+<section id="signup" class="py-5">
+    <div class="container">
+        <div class="row pb-4">
+            <div class="col-lg-12 text-center title-text">
+                <h2 class="display-6 text-capitalize title-h2">Tizimga yangi admin qo'shish</h2>
+                <p class="mb-0">Fo'rmani to'ldiring va tizimga admin qo'shing</p>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="row">
+            <form action="/admin/signup" method="POST">
+                <div class="col-md-6 offset-md-3">
+                    {{#if registerError}}
+                        <div class="alert alert-danger" role="alert">{{registerError}}</div>
+                    {{/if}}
+                    <div class="form-area d-flex flex-column">
+                        <input type="text" placeholder="username" class="mb-4" name="username">
+                        <input type="email" placeholder="example@gmail.com" class="mb-4" name="email">
+                        <input type="password" placeholder="Password" class="mb-4" name="password">
+                        <input type="password" placeholder="Re-password" class="mb-4" name="password2">
+                        <button type="submit">Ro'yxatdan o'tish</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

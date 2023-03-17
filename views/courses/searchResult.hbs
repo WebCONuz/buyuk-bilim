@@ -1,0 +1,65 @@
+    <!-- HOME SECTION -->
+    <div id="header2">
+        <div class="curtain">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 d-flex flex-column justify-content-center">
+                        <h1 class="header-title text-center mb-3 display-4 fw-bolder">Qidiruv natijasi:</h1>
+                        <p class="header-text text-center mb-0 fw-bold">
+                            Topilgan <i class="bi bi-arrow-right-short"></i> {{courseType}} kurslar
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COURSES SECTION -->
+    <section id="coursePage">
+        <div class="container py-5">
+            <div class="row">
+
+                <form action="/courses/offline" method="get">
+                    <div class="col-lg-12 d-flex justify-content-center align-items-center">
+                        <input 
+                            type="text" 
+                            placeholder="Search here" 
+                            class="mb-4 w-75 w-sm-50"
+                            name="search"
+                            value="{{querySearch}}"
+                        >
+                        <button type="submit" class="mb-4">Search</button>
+                    </div>
+                </form>
+                
+                <div class="col-md-12 d-flex flex-wrap">
+                    {{#if allCourses}}
+                        {{#each allCourses}}
+                            <div class="card" data-aos="fade-up" data-aos-duration="800">
+                                <img src="{{url}}{{courseImg}}" alt="course-1" class="w-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span><i class="bi bi-clock-history"></i> &nbsp;<span>{{duration}} oy</span></span>
+                                        <span><i class="bi bi-star-fill"></i> {{star}}</span>
+                                    </div>
+                                    <h3 class="mb-4 mt-2">{{title}}</h3>
+                                    <div class="name d-flex align-items-center flex-wrap">
+                                        <h6 class="mb-0 text-danger">Mentor: </h6>
+                                        <span class="ms-3 fw-bold">{{mentor}}</span>
+                                    </div>                          
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>Price: <b>{{price}} so'm</b></span>
+                                        <a href="{{url}}/auth/register"><b>Ro'yxatdan o'tish</b></a>
+                                    </div>
+                                </div>
+                            </div>
+                        {{/each}}
+                    {{else}}
+                        <h1 class="text-danger text-center w-100 py-5">Bunday qidiruvdagi kurs topilmadi!</h1>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </section>

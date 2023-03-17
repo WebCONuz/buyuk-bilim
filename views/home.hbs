@@ -1,0 +1,378 @@
+<!-- HOME SECTION -->
+<header id="home">
+    <div class="slick-sliders">
+        <div class="home-layer home-layer-1">
+            <div class="cover">
+                <div class="container-lg h-100">
+                    <div class="row px-0 px-sm-3 h-100">
+                        <div class="col-md-7 col-lg-6 d-flex flex-column justify-content-center h-100"
+                            data-aos="fade-up" data-aos-duration="1500">
+                            <h3><q>Buyuk Bilim</q></h3>
+                            <h1 class="display-4 mb-4">Sening ilming,<br> Sening qadring</h1>
+                            <div class="head-btn mt-5 pt-5">
+                                <span>Birinchi sinov darsimizga ro'yxatdan o'ting:</span><br>
+                                <a href="{{url}}auth/register">
+                                    <button class="text-uppercase mt-3">Bepul dars</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0 pe-lg-4" data-aos="fade-up" data-aos-duration="1100">
+                <img class="w-100" src="{{url}}img//about/diz2.png" alt="About rasmi" />
+            </div>
+            <div class="col-lg-6">
+                <h2 class="mb-3 mb-sm-4">Biz haqimizda</h2>
+                <p class="mb-4 mb-sm-5 text">Markazimiz o'z faoliyatini 2019-yilda boshlagan. Hozirgacha yuqori malakali
+                    ustozlar va uzoq yillik tajribaga ega hodimlar bilan faoliyat ko'rsatib kelmoqda:</p>
+                <div class="about-box mb-4 d-flex justify-content-between align-items-center" data-aos="fade-up"
+                    data-aos-delay="0" data-aos-duration="1000">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                    </div>
+                    <div class="info-text">
+                        <h5>Maqsadimiz</h5>
+                        <p class="mb-0">Har bir o'quvchimizda eng yaxshi natija ko'rsatish va buyuk insonlar
+                            yetishtirish.</p>
+                    </div>
+                </div>
+                <div class="about-box mb-4 d-flex justify-content-between align-items-center" data-aos="fade-up"
+                    data-aos-delay="100" data-aos-duration="1000">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <i class="bi bi-ui-checks"></i>
+                    </div>
+                    <div class="info-text">
+                        <h5>Imkoniyatlar</h5>
+                        <p class="mb-0">Samarqandda eng kuchli o'qituvchilar dars beradigan o'quv markazlardan biri.</p>
+                    </div>
+                </div>
+                <div class="about-box d-flex justify-content-between align-items-center" data-aos="fade-up"
+                    data-aos-delay="200" data-aos-duration="1000">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <i class="bi bi-gem"></i>
+                    </div>
+                    <div class="info-text">
+                        <h5>Natijalar</h5>
+                        <p class="mb-0">2021-yil 100% o'qishga kirgan guruhlarimiz bor va umumiy o'quv markazimiz
+                            natijasi 79% dan yuqori.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COURSE SECTION -->
+<section id="course" class="py-4 pb-md-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-12 text-center title-text">
+                <h2 class="display-6 text-capitalize title-h2">Kurslarimiz</h2>
+                <p class="mb-0">Quyida siz bizning ba'zi kurslarimiz bilan tanishishingiz mumkin</p>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- carousel services -->
+                <div class="owl-carousel text-center">
+
+                    {{#if courses}}
+                    {{#each courses}}
+                    <div class="card mx-2 course-card">
+                        <div class="card-top-img">
+                            <img src="{{url}}{{courseImg}}" class="img-fluid w-100" alt="course-img1" />
+                        </div>
+                        <div class="card-body p-4">
+                            <h4 class="mb-0">{{title}}</h4>
+                            <div class="course-text-info d-flex align-items-center my-4 justify-content-between">
+                                <span><i class="bi bi-alarm text-danger"></i> &nbsp;{{duration}} Month</span>
+                                <span><i class="bi bi-wallet2 text-danger"></i> &nbsp;{{price}}</span>
+                            </div>
+                            <p class="mb-0">
+                                Kursga hoziroq ro'yxatdan o'ting: <a href="{{url}}auth/register">Ro'yxatdan o'tish</a>
+                            </p>
+                        </div>
+                    </div>
+                    {{/each}}
+                    {{/if}}
+
+                </div>
+                <!-- carousel services -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section id="callToAction">
+    <div class="action-box py-5">
+        <div class="container-lg py-2">
+            <div class="row">
+                <div class="col-md-12 text-light d-flex flex-column justify-content-center align-items-center">
+                    <a href="https://www.youtube.com/watch?v=0r8b5x_I2cA" target="_blank">
+                        <div class="action-animation d-flex align-items-center justify-content-center mb-5 mt-4">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </a>
+                    <h2 class="display-6 mb-3 text-center" data-aos="fade-up" data-aos-delay="200"
+                        data-aos-duration="1500">Markazimiz ochilish marosimi</h2>
+                    <p class="mb-5 time text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+                        Bizni ijtimoiy tarmoqlarda ham kuzatib boring</p>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+                        <a href="https://www.youtube.com/watch?v=0r8b5x_I2cA" target="_blank">
+                            <button class="action-btn">Videoni ko'rish</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  
+
+<!-- TRAINERS SECTION -->
+<section id="trainers" class="py-4 py-md-5 Slick">
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-lg-12 text-center title-text">
+                <h2 class="display-6 text-capitalize title-h2">O'qituvchilarimiz</h2>
+                <p class="mb-0">Eng kuchli mutaxasislardan ta'lim oling</p>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="row gx-4 mt-4">
+            <div class="col-lg-12">
+                <!-- carousel slides -->
+                <div class="owl-carousel text-center">
+
+                    <div class="card mx-2 mx-lg-2 my-3 trainer-card">
+                        <div class="card-top-img">
+                            <img src="{{url}}img/trainers/manAvatar.jpg" alt="course-img1" />
+                            <div class="trainer-links mb-0 d-flex flex-column">
+                                <a href="#" class="bi bi-share-fill"></a>
+                                <a href="#" class="bi bi-facebook"></a>
+                                <a href="#" class="bi bi-telegram"></a>
+                                <a href="#" class="bi bi-instagram"></a>
+                                <a href="#" class="bi bi-twitter"></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="mb-0 text-capitalize name">Ernazarov Abror</h5>
+                            <p class="mb-0 special">Matematika</p>
+                            <p class="mb-0 about-text">Ernazarov Abror. matematika fani bo'yicha 25 yillik o'qitish
+                                tajribasiga ega yuqori malakali o'qituvchi.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mx-2 mx-lg-2 my-3 trainer-card">
+                        <div class="card-top-img">
+                            <img src="{{url}}img/trainers/matem.jpg" alt="course-img1" />
+                            <div class="trainer-links mb-0 d-flex flex-column">
+                                <a href="#" class="bi bi-share-fill"></a>
+                                <a href="#" class="bi bi-facebook"></a>
+                                <a href="#" class="bi bi-telegram"></a>
+                                <a href="#" class="bi bi-instagram"></a>
+                                <a href="#" class="bi bi-twitter"></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="mb-0 text-capitalize name">Hikmatullayev Farrux</h5>
+                            <p class="mb-0 special">Matematika</p>
+                            <p class="mb-0 about-text">Hikmatullayev Farrux. matematika fani bo'yicha 4 yillik o'qitish
+                                tajribasiga ega yuqori malakali o'qituvchi.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mx-2 mx-lg-2 my-3 trainer-card">
+                        <div class="card-top-img">
+                            <img src="{{url}}img/trainers/manAvatar.jpg" alt="course-img1" />
+                            <div class="trainer-links mb-0 d-flex flex-column">
+                                <a href="#" class="bi bi-share-fill"></a>
+                                <a href="#" class="bi bi-facebook"></a>
+                                <a href="#" class="bi bi-telegram"></a>
+                                <a href="#" class="bi bi-instagram"></a>
+                                <a href="#" class="bi bi-twitter"></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="mb-0 text-capitalize name">Ergashev Ravshan </h5>
+                            <p class="mb-0 special">Tarix</p>
+                            <p class="mb-0 about-text">Ergashev Ravshan. Tarix fani bo'yicha 25 yillik o'qitish
+                                metodikasiga ega yuqori malakali o'qituvchi.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mx-2 mx-lg-2 my-3 trainer-card">
+                        <div class="card-top-img">
+                            <img src="{{url}}img/trainers/manAvatar.jpg" alt="course-img1" />
+                            <div class="trainer-links mb-0 d-flex flex-column">
+                                <a href="#" class="bi bi-share-fill"></a>
+                                <a href="#" class="bi bi-facebook"></a>
+                                <a href="#" class="bi bi-telegram"></a>
+                                <a href="#" class="bi bi-instagram"></a>
+                                <a href="#" class="bi bi-twitter"></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="mb-0 text-capitalize name">Abduazizov Bunyod</h5>
+                            <p class="mb-0 special">IELTS, CEFR</p>
+                            <p class="mb-0 about-text">Abduazizov Bunyod. Ingliz tili fani bo'yicha 15 yillik o'qitish
+                                tajribasiga ega yuqori malakali o'qituvchi.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mx-2 mx-lg-2 my-3 trainer-card">
+                        <div class="card-top-img">
+                            <img src="{{url}}img/trainers/5.jpg" alt="course-trainer5" />
+                            <div class="trainer-links mb-0 d-flex flex-column">
+                                <a href="#" class="bi bi-share-fill"></a>
+                                <a href="#" class="bi bi-facebook"></a>
+                                <a href="#" class="bi bi-telegram"></a>
+                                <a href="#" class="bi bi-instagram"></a>
+                                <a href="#" class="bi bi-twitter"></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="mb-0 text-capitalize name">Shernazarov Ixtiyor</h5>
+                            <p class="mb-0 special">Fransuz tili</p>
+                            <p class="mb-0 about-text">Ixtiyor Shernazarov. Fransuz tili fani bo'yicha 7 yillik o'qitish
+                                tajribasiga ega yuqori malakali o'qituvchi..</p>
+                        </div>
+                    </div>
+
+                    <div class="card mx-2 mx-lg-2 my-3 trainer-card">
+                        <div class="card-top-img">
+                            <img src="{{url}}img/trainers/fizika.jpg" alt="course-img1" />
+                            <div class="trainer-links mb-0 d-flex flex-column">
+                                <a href="#" class="bi bi-share-fill"></a>
+                                <a href="#" class="bi bi-facebook"></a>
+                                <a href="#" class="bi bi-telegram"></a>
+                                <a href="#" class="bi bi-instagram"></a>
+                                <a href="#" class="bi bi-twitter"></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="mb-0 text-capitalize name">Temirov Shohbozbek</h5>
+                            <p class="mb-0 special">Fizika</p>
+                            <p class="mb-0 about-text">Temirov Shohbozbek. Fizika fani bo'yicha 7 yillik o'qitish
+                                metodikasiga ega yuqori malakali o'qituvchi..</p>
+                        </div>
+                    </div>
+
+                    <div class="card mx-2 mx-lg-2 my-3 trainer-card">
+                        <div class="card-top-img">
+                            <img src="{{url}}img/trainers/manAvatar.jpg" alt="course-img1" />
+                            <div class="trainer-links mb-0 d-flex flex-column">
+                                <a href="#" class="bi bi-share-fill"></a>
+                                <a href="#" class="bi bi-facebook"></a>
+                                <a href="#" class="bi bi-telegram"></a>
+                                <a href="#" class="bi bi-instagram"></a>
+                                <a href="#" class="bi bi-twitter"></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="mb-0 text-capitalize name">Abdullayev Shaxobiddin</h5>
+                            <p class="mb-0 special">Ingliz tili</p>
+                            <p class="mb-0 about-text">Abdullayev Shaxobiddin. Ingliz tili fani bo'yicha 4 yillik
+                                o'qitish metodikasiga ega yuqori malakali o'qituvchi..</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- carousel slides -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS SECTION -->
+<section id="work" class="pb-5">
+    <div class="container pb-5">
+        <div class="row pb-4">
+            <div class="col-lg-12 text-center title-text">
+                <h2 class="display-6 text-capitalize title-h2">Qo'llanma</h2>
+                <p class="mb-0">Kurslarga qanday ro'yxatdan o'tish haqida qisqacha</p>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-duration="1500">
+                <div class="work-card text-center py-5 px-3">
+                    <div class="image">
+                        <img src="{{url}}img/work/12.png" alt="card-img">
+                        <div class="order">1</div>
+                    </div>
+                    <h4 class="my-3">Registratsiya</h4>
+                    <p class="px-lg-3">Avvalo registratsiya bo'limiga o'tib, formani to'ldiring</p>
+                    <a href="{{url}}auth/register">Registratsiya...</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-duration="1500">
+                <div class="work-card text-center py-5 px-3">
+                    <div class="image">
+                        <img src="{{url}}img/work/13.png" alt="card-img">
+                        <div class="order">2</div>
+                    </div>
+                    <h4 class="my-3">Kurslar</h4>
+                    <p class="px-lg-3">Kurslar bilan tanishib, o'zingizga kerakli kursni tanlang.</p>
+                    <a href="{{url}}courses/offline">Kurslarimiz...</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-duration="1500">
+                <div class="work-card text-center py-5 px-3">
+                    <div class="image">
+                        <img src="{{url}}img/work/14.png" alt="card-img">
+                        <div class="order">3</div>
+                    </div>
+                    <h4 class="my-3">Boshlang</h4>
+                    <p class="px-lg-3">Vaqtni ketkazmay tezroq ta'lim olishni boshlang, Aloqa:</p>
+                    <a href="{{url}}#work">(95) 500 07 06</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-duration="1500">
+                <div class="work-card text-center py-5 px-3">
+                    <div class="image">
+                        <img src="{{url}}img/work/15.png" alt="card-img">
+                        <div class="order">4</div>
+                    </div>
+                    <h4 class="my-3">Sertifikat</h4>
+                    <p class="px-lg-3">Kurslarimizni tugating va sertifikatni qo'lga kiriting.</p>
+                    <a href="{{url}}">Buyuk Bilim</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section id="callToAction" class="foot-action">
+    <div class="action-box py-5">
+        <div class="container-lg py-2">
+            <div class="row">
+                <div class="col-md-12 text-light d-flex justify-content-between align-items-center">
+                    <div class="box">
+                        <h2 class="display-6 mb-3" data-aos="fade-up" data-aos-delay="200"
+                            data-aos-duration="1500">Kurslarimizning hammasi siz uchun.</h2>
+                        <p class="time" data-aos="fade-up" data-aos-delay="200"
+                            data-aos-duration="1500">
+                            "Ro'yxatdan o'tish" tugmasini bosing va hoziroq ta'lim olishni boshlang</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+                        <a href="{{url}}auth/register" target="_blank">
+                            <button class="action-btn">Ro'yxatdan o'tish</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

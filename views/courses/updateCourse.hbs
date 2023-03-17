@@ -1,0 +1,41 @@
+<section id="signup" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center title-text">
+                <h2 class="text-capitalize title-h2">Kursni tahrirlash</h2>
+            </div>
+        </div>
+        <div class="row">
+            <form action="/courses/{{id}}/edit" method="POST" enctype="multipart/form-data">
+                <div class="col-md-6 offset-md-3">
+                    <div class="form-area d-flex flex-column">
+                        <label for="title" class="form-label fw-bold text-secondary">Kurs nomi:</label>
+                        <input type="text" id="title" placeholder="Kurs nomi" class="mb-4" name="title" value="{{course.title}}">
+                        <label for="format" class="form-label fw-bold text-secondary">Kurs formati:</label>
+                        {{#if type}}
+                            <select class="mb-4" name="type" id="format">
+                                <option value="offline" selected>offline</option>
+                                <option value="online">online</option>
+                            </select>
+                        {{else}}
+                            <select class="mb-4" name="type" id="format">
+                                <option value="offline">offline</option>
+                                <option value="online" selected>online</option>
+                            </select>
+                        {{/if}}
+                        <label for="price" class="form-label fw-bold text-secondary">Kurs narxi:</label>
+                        <input type="text" id="price" placeholder="Kurs narxi (so'm)" class="mb-4" name="price" value="{{course.price}}">
+                        <label for="month" class="form-label fw-bold text-secondary">Kurs davomiyligi (oy):</label>
+                        <input type="number" id="month" placeholder="Davomiyligi (oy)" class="mb-4" name="duration" value="{{course.duration}}">
+                        <label for="mentor" class="form-label fw-bold text-secondary">Kurs mentori:</label>
+                        <input type="text" id="mentor" placeholder="Kurs mentori" class="mb-4" name="mentor" value="{{course.mentor}}">   
+                        <label for="courseImg" class="mb-2 fw-bold text-secondary">Kurs headeri Rasmi</label>
+                        <input type="file" id="courseImg" class="mb-2" name="courseImg">
+                        <a href="{{course.courseImg}}" target="_blank" class="mb-4 text-primary">Headerning avvalgi rasmi</a>
+                        <button type="submit">Kursni yangilash</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

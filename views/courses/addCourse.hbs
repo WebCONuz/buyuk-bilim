@@ -1,0 +1,29 @@
+<!-- REGISTER SECTION  -->
+<section id="signup" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center title-text">
+                <h2 class="text-capitalize title-h2">Yangi kurs kiritish</h2>
+            </div>
+        </div>
+        <div class="row">
+            <form action="/courses/add" method="POST" enctype="multipart/form-data">
+                <div class="col-md-6 offset-md-3">
+                    <div class="form-area d-flex flex-column">
+                        <input type="text" placeholder="Kurs nomi" class="mb-4" name="title">
+                        <select class="mb-4" name="type" id="">
+                            <option value="offline">offline</option>
+                            <option value="online">online</option>
+                        </select>
+                        <input type="text" placeholder="Kurs narxi (so'm)" class="mb-4" name="price">
+                        <input type="number" placeholder="Davomiyligi (oy)" class="mb-4" name="duration">
+                        <input type="text" placeholder="Kurs mentori" class="mb-4" name="mentor">   
+                        <label for="courseImg" class="mb-2 fw-bold text-primary">Kurs headeri Rasmi</label>
+                        <input type="file" id="courseImg" class="mb-4" name="courseImg">
+                        <button type="submit">Kursni ro'yxatga olish</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

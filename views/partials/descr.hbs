@@ -1,0 +1,38 @@
+<!-- CHAT BUTTON -->
+<div id="chat" class="d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#formModal">
+    <i class="bi bi-chat-left-text-fill"></i>
+    <div class="elon">
+        <span>Biz haqimizda fikrlaringiz</span>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="/auth/description" method="POST">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <h3 class="">Fikrlaringiz ...</h3>
+                    </div>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Ism-sharifingiz:</label>
+                        <input type="text" class="form-control" id="username" name="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tel" class="form-label">Telefon raqamingiz:</label>
+                        <input type="text" class="form-control" id="tel" name="phone" value="+998">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descr" class="form-label">Qanday yordam bera olamiz?</label>
+                        <textarea class="form-control" id="descr" rows="3" name="descr"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success ms-2">Jo'natish</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
