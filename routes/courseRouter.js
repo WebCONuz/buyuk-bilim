@@ -19,7 +19,7 @@ router.get('/add', protucted, addNewCoursePage);
 router.post('/add', protucted, upload.single('courseImg'), addNewCourse);
 router.get('/all', protucted, getAllCoursePage);
 router.get('/:id', protucted, updateCoursePage);
-router.post('/:id/edit', protucted, upload.single('courseImg'), updateCourse);
+router.post('/:id/edit', protucted, upload.single('courseImg'), updateCourse); 
 router.post('/:id/delete', protucted, deleteCourse);
 
 

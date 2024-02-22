@@ -46,7 +46,10 @@ app.use(
 
 // Connect to database
 mongoose.connect(process.env.DATABASE_URI, (err) => {
-  if (err) throw err;
+  if (err) {
+    console.log(err.message);
+    throw err;
+  }
   console.log("Connect to database...");
 });
 
@@ -66,3 +69,10 @@ const Port = process.env.PORT || 5001;
 app.listen(Port, () => {
   console.log(`Loyiha ${Port}-portda ishga tushdi`);
 });
+
+// DATABASE_URI=mongodb+srv://muxammadi:Uzb$0007060@cluster0.g85zbbg.mongodb.net/buyukbilim - online
+// DATABASE_URI=mongodb://127.0.0.1:27017/Buyuk_Bilim - offline
+// PORT=5000
+// URL=http://localhost:5000/
+// DATABASE_URI=mongodb://127.0.0.1:27017/Buyuk_Bilim
+// SESSION_SECRET=Men!ng$ekretk@litim(7-d^raj@liH!MOy^)

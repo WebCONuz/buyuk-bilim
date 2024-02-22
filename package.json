@@ -2,7 +2,7 @@
   "name": "oquv_markaz",
   "version": "1.0.0",
   "description": "Buyuk Bilim o'quv markazi veb sayti",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
@@ -11,7 +11,7 @@
   "author": "Toshtemirov Muxammadi",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.0.1",
+    "bcrypt": "^5.1.1",
     "connect-flash": "^0.1.1",
     "connect-mongodb-session": "^3.1.1",
     "dotenv": "^16.0.0",
